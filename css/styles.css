@@ -1,0 +1,45 @@
+@charset "utf-8";
+/* CSS Document */
+
+body {
+	background-image: url("../images/Background.jpg");
+}
+
+h1, h2, h3 {
+	color: white;
+}
+
+.main_container_Home {
+	display: flex;
+  	flex-direction: column;
+ 	align-items: flex-start;
+	padding-top: 5vh;
+	
+	height: 100%;
+    margin: 0;
+    align-items: center;
+    justify-content: center;
+}
+
+.elevator {
+	cursor: pointer;
+	display: none;
+}
+
+.modal {
+	--bs-modal-width: 289px;
+}
+
+.modal-content .modal-body {
+	margin: 0;
+	padding: 0;
+}
+
+.broomstation {
+	cursor: url(https://www.svgrepo.com/show/196375/broom.svg), auto;
+	height: 100vh;
+}
+
+.letters {
+	position: static;
+}
