@@ -41,5 +41,9 @@ h1, h2, h3 {
 }
 
 .letters {
-	position: static;
+	position: absolute;
+}
+
+.basket {
+	cursor: pointer;
 }

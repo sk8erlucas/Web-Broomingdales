@@ -41,23 +41,137 @@
 
 <body>
 
-	<div class="container">
+	<div class="mt-5" style="height: 100vh;">
 		<div class="row">
-			<div class="col">
+			<div class="col-4">
 				<img src="images/elevator_closed.png" alt="" name="elevator" width="423" height="550" class="elevator mt-5"/>
 			</div>
 			
 			<div class="col">
-		    	<img src="images/construction.png" width="574" height="788" alt=""/>
-			</div>
-			
-			<div class="col">
-				<h1 style="color: aliceblue">Cat Floor</h1>
+				<div class="row mt-5">
+					<div class="col">
+				    	<img src="images/basket.png" width="138" class="img-fluid basket"/>
+					</div>
+					<div class="col">
+				    	<img src="images/basket.png" width="138" class="img-fluid basket"/>
+					</div>
+					<div class="col">
+				    	<img src="images/basket.png" width="138" class="img-fluid basket"/>
+					</div>
+				</div>
+				
+				<div class="row mt-5">
+					<div class="col">
+				    	<img src="images/basket.png" width="138" class="img-fluid basket"/>
+					</div>
+					<div class="col">
+				    	<img src="images/basket.png" width="138" class="img-fluid basket"/>
+					</div>
+					<div class="col">
+				    	<img src="images/basket.png" width="138" class="img-fluid basket"/>
+					</div>
+				</div>
+				
+				<div class="row mt-5">
+					<div class="col">
+				    	<img src="images/basket.png" width="138" class="img-fluid basket"/>
+					</div>
+					<div class="col">
+				    	<img src="images/basket.png" width="138" class="img-fluid basket"/>
+					</div>
+					<div class="col">
+				    	<img src="images/basket.png" width="138" class="img-fluid basket"/>
+					</div>
+				</div>
+		    	
 			</div>
 		</div>
 	</div>
 	
-	
+	<script>
+		
+		//Invocada mas abajo
+		function sleep(ms) {
+  			return new Promise(resolve => setTimeout(resolve, ms));
+		}
+		
+		var cat = new Audio('Sounds/cat.wav');
+		
+		counter = 0;
+		
+		//Randoms de cero a 8 (9 Canastas)
+		puppyIn = Math.floor(Math.random() * 9);
+		stringIn = Math.floor(Math.random() * 9);
+		
+		//Si son iguales debe usar otro -----------
+		
+		//Asignando ID a las canastas
+		$(".basket").each(function () {
+			
+			if (counter == puppyIn)
+			{
+				$(this).prop('id', "p");
+			}
+			else if (counter == stringIn)
+			{
+				$(this).prop('id', "h");
+			}
+			else
+			{
+				$(this).prop('id', counter);
+			}
+			
+			counter++;
+			
+		});
+		
+		var puppyFound = false;
+		var boneFound = false;
+		
+		$(".basket").on( "click", 
+			function (){
+				var idClick = $(this).attr("id");
+				
+				if (idClick == "p")
+				{
+					$(this).attr("src","images/puppy basket.png");
+					puppyFound = true;
+				}
+				else if (idClick == "h")
+				{
+					$(this).attr("src","images/bone basket.png");
+					boneFound = true;
+				}
+				else
+				{
+					$(this).attr("src","images/cat basket.png");
+					cat.play();
+					
+					sleep(1000).then(() => 
+									 $(this).attr("src","images/basket.png"));
+					
+					if (puppyFound == true)
+					{
+						$("#p").attr("src","images/basket.png");
+						puppyFound = false;
+					}
+					
+					if (boneFound == true)
+					{
+						$("#h").attr("src","images/basket.png");
+						boneFound = false;
+					}
+					
+					//Happy Puppy sound en hueso y perro
+					//Si los 2 son true you won console log
+					//Luego hacer
+					//clap sound al ganar
+					//Modal won botones jugar de vuelta o ir a otro piso
+				}
+			
+		});
+				
+	</script>
 
 
 	<!-- Modal -->
