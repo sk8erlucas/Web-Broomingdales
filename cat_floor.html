@@ -87,92 +87,6 @@
 			</div>
 		</div>
 	</div>
-	
-	<script>
-		
-		//Invocada mas abajo
-		function sleep(ms) {
-  			return new Promise(resolve => setTimeout(resolve, ms));
-		}
-		
-		var cat = new Audio('Sounds/cat.wav');
-		
-		counter = 0;
-		
-		//Randoms de cero a 8 (9 Canastas)
-		puppyIn = Math.floor(Math.random() * 9);
-		stringIn = Math.floor(Math.random() * 9);
-		
-		//Si son iguales debe usar otro -----------
-		
-		//Asignando ID a las canastas
-		$(".basket").each(function () {
-			
-			if (counter == puppyIn)
-			{
-				$(this).prop('id', "p");
-			}
-			else if (counter == stringIn)
-			{
-				$(this).prop('id', "h");
-			}
-			else
-			{
-				$(this).prop('id', counter);
-			}
-			
-			counter++;
-			
-		});
-		
-		var puppyFound = false;
-		var boneFound = false;
-		
-		$(".basket").on( "click", 
-			function (){
-				var idClick = $(this).attr("id");
-				
-				if (idClick == "p")
-				{
-					$(this).attr("src","images/puppy basket.png");
-					puppyFound = true;
-				}
-				else if (idClick == "h")
-				{
-					$(this).attr("src","images/bone basket.png");
-					boneFound = true;
-				}
-				else
-				{
-					$(this).attr("src","images/cat basket.png");
-					cat.play();
-					
-					sleep(1000).then(() => 
-									 $(this).attr("src","images/basket.png"));
-					
-					if (puppyFound == true)
-					{
-						$("#p").attr("src","images/basket.png");
-						puppyFound = false;
-					}
-					
-					if (boneFound == true)
-					{
-						$("#h").attr("src","images/basket.png");
-						boneFound = false;
-					}
-					
-					//Happy Puppy sound en hueso y perro
-					//Si los 2 son true you won console log
-					//Luego hacer
-					//clap sound al ganar
-					//Modal won botones jugar de vuelta o ir a otro piso
-				}
-			
-		});
-				
-	</script>
-
 
 	<!-- Modal -->
 	<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -187,6 +101,27 @@
 	  </div>
 	</div>
 	
+	<!-- Modal Won the game-->
+	<div class="modal fade" id="winModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+	  <div class="modal-dialog modal-dialog-centered">
+		<div class="modal-content">
+      		<div class="modal-header">
+        		<h5 class="modal-title">Congratulations! You won the game</h5>
+      		</div>
+			
+      		<div class="modal-body">
+        		<p>Let's put a nice image for a win.</p>
+      		</div>
+			
+		    <div class="modal-footer">
+				<a class="btn btn-primary" href="cat_floor.html">Play Again!</a>
+				<a class="btn btn-secondary" href="index.html">Go to Roof!</a>
+		    </div>
+    	</div>
+  	  </div>
+	</div>
+
+	
 	<map name="mapa">
 		
 		<area shape="rect" coords="76,247,126,285" href="index.html" alt="Button1">
@@ -200,6 +135,7 @@
 	</map>
 	
 	<script src="Javascript/scripts.js"></script>
+	<script src="Javascript/baskets.js"></script>
 	
 	<!-- JavaScript Bundle with Popper -->
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>

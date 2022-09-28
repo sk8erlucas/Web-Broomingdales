@@ -24,7 +24,7 @@
 
 	elevator.addEventListener("click", (event) => {
 
-		$('#exampleModal').modal('show')
+		$('#exampleModal').modal('show');
 
 	}, false);
 
@@ -44,3 +44,11 @@
 	);
 
 	//END - Sound in the elevator
+
+//END ELEVATOR
+
+
+
+//MISCELANOUS
+
+var victory_sound = new Audio('Sounds/victory_sound.wav');
