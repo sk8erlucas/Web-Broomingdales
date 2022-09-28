@@ -1,9 +1,10 @@
 @charset "utf-8";
 /* CSS Document */
 
-body {
+/*body {
 	background-image: url("../images/Background.jpg");
-}
+}*/
+
 
 h1, h2, h3 {
 	color: white;
@@ -46,4 +47,12 @@ h1, h2, h3 {
 
 .basket {
 	cursor: pointer;
+}
+
+.contenedor {
+	background-image: url("../images/Background.jpg");
+}
+
+.footer {
+	background-image: url("../images/floor_texture.jpg");
 }
