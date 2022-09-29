@@ -46,7 +46,7 @@
 			<div class="col-9">
 				<div class="row">
 					
-					<span class="sticker sticker-lg mt-5 mb-5" style="font-size: 3rem;"><span id="NombreMagico">Make your magical name</span></span>
+					<span class="sticker sticker-lg mt-5 mb-5" style="font-size: 3rem;"><span id="NombreMagico">Make your magical name </span></span>
 					
 					
 					<div class="col-1"></div>
@@ -101,6 +101,8 @@
 		
 		$(".first_name").click(function() {
 			
+			elevator_press_sound.play();
+			
 			FirstName = $(this).text();
 			
 			QuitarTodosHovers1();
@@ -111,6 +113,8 @@
 		
 		
 		$(".last_name").click(function() {
+			
+			elevator_press_sound.play();
 			
 			LastName = $(this).text();
 			
@@ -131,7 +135,7 @@
 		}
 		
 		function ActualizarNombres() {
-			var string = FirstName + " " + LastName;
+			var string = FirstName + " " + LastName + " ";
 			$("#NombreMagico").html(string);
 		}
 		
