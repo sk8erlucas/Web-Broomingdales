@@ -40,33 +40,335 @@
 </head>
 
 <body>
-
-	<div class="container">
+	<div class="contenedor pt-5 pl-5 pr-5">
 		<div class="row">
-			<div class="col">
-				<img src="images/elevator_closed.png" alt="" name="elevator" width="423" height="550" class="elevator mt-5"/>
-			</div>
+			<div class="col"></div>
+			<div class="col-9 mt-5 mb-5">
+				
+				<div>
+					<div class="row">
+						<div class="col text-center">
+							<img src="images/topping_nothing.png" alt="" width="131" height="184" id="Topping"/>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col text-center" id="CakeLayer3" style="background-image: url('images/cake3_noselection.png')">
+							<img src="images/cake3_Nothing.png" alt="" width="313" height="142" id="DecorLayer3"/>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col text-center" id="CakeLayer2" style="background-image: url('images/cake2_noselection.png')">
+							<img src="images/cake2_Nothing.png" alt="" width="447" height="201" id="DecorLayer2"/>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col text-center" id="CakeLayer1" style="background-image: url('images/cake1_noselection.png')">
+							<img src="images/cake1_Nothing.png" alt="" width="527" height="229" id="DecorLayer1"/>
+						</div>
+					</div>
+				</div>
+				
+				
+			  <div class="row mt-5 cakes">
+					
+					<div class="col">
+				    	<img src="images/cake3_original.png" width="63" height="28" alt="" class="hvr-grow-rotate cake_layer_bg_top"/>
+					</div>
+					
+					<div class="col">
+				    	<img src="images/cake3_two.png" width="63" height="28" alt="" class="hvr-grow-rotate cake_layer_bg_top"/>
+					</div>
+					
+					<div class="col">
+				    	<img src="images/cake3_3.png" width="63" height="28" alt="" class="hvr-grow-rotate cake_layer_bg_top"/>
+					</div>
+					
+					<div class="col">
+					</div>
+				</div>
+				
+				<div class="row mt-5 cakes">
+					
+					<div class="col">
+				    	<img src="images/cake2_original.png" width="89" height="40" alt="" class="hvr-grow-rotate cake_layer_bg_center"/>
+					</div>
+					
+				  <div class="col">
+				    	<img src="images/cake2_two.png" width="89" height="40" alt="" class="hvr-grow-rotate cake_layer_bg_center"/>
+					</div>
+					
+				  <div class="col">
+				    	<img src="images/cake2_3.png" width="89" height="40" alt="" class="hvr-grow-rotate cake_layer_bg_center"/>
+					</div>
+					
+				  <div class="col">
+				    	
+					</div>
+				</div>
+				
+				<div class="row mt-5 cakes">
+					
+					<div class="col">
+				    	<img src="images/cake1_original.png" width="105" height="46" alt="" class="hvr-grow-rotate cake_layer_bg_base"/>
+					</div>
+					
+				  <div class="col">
+				    	<img src="images/cake1_two.png" width="105" height="46" alt="" class="hvr-grow-rotate cake_layer_bg_base"/>
+					</div>
+					
+				  <div class="col">
+				    	<img src="images/cake1_3.png" width="105" height="46" alt="" class="hvr-grow-rotate cake_layer_bg_base"/>
+					</div>
+					
+				  <div class="col">
+				    <button type="button" class="btn btn-secondary disabled" id="Disabled">Make The Cake</button>
+					<button type="button" class="btn btn-success" id="AceptAndDecor" style="display: none">Accept and Decor</button>
+				  </div>
+					
+				</div>
+				
+				
+				
 			
-			<div class="col">
-		    	<img src="images/construction.png" width="574" height="788" alt=""/>
-			</div>
-			
-			<div class="col">
-				<h1 style="color: aliceblue">Moonlight Cafe Floor</h1>
+				
+				<div class="decors">
+				<div class="row mt-5">
+					
+				  <div class="col">
+				    	<img src="images/cake3_Bats.png" width="63" height="28" alt="" class="hvr-grow-rotate cake_decor_bg_top"/>
+				  </div>
+					
+				  <div class="col">
+				    	<img src="images/cake3_Eyes.png" width="63" height="28" alt="" class="hvr-grow-rotate cake_decor_bg_top"/>
+				  </div>
+					
+				  <div class="col">
+				    	<img src="images/cake3_Spiders.png" width="63" height="28" alt="" class="hvr-grow-rotate cake_decor_bg_top"/>
+				  </div>
+					
+				  <div class="col">
+				  </div>
+				</div>
+					
+				<div class="row mt-5">
+					
+					<div class="col">
+				    	<img src="images/cake2_Bats.png" width="89" height="40" alt="" class="hvr-grow-rotate cake_decor_bg_center"/>
+					</div>
+					
+				  <div class="col">
+				    	<img src="images/cake2_Eyes.png" width="89" height="40" alt="" class="hvr-grow-rotate cake_decor_bg_center"/>
+					</div>
+					
+				  <div class="col">
+				    	<img src="images/cake2_Spiders.png" width="89" height="40" alt="" class="hvr-grow-rotate cake_decor_bg_center"/>
+					</div>
+					
+				  <div class="col">
+				    	<button type="button" class="btn btn-danger" id="GoBackToCake">Go Back</button>
+					</div>
+				</div>
+				
+				<div class="row mt-5">
+					
+					<div class="col">
+				    	<img src="images/cake1_Bats.png" width="105" height="46" alt="" class="hvr-grow-rotate cake_decor_bg_base"/>
+					</div>
+					
+				  <div class="col">
+				    	<img src="images/cake1_Eyes.png" width="105" height="46" alt="" class="hvr-grow-rotate cake_decor_bg_base"/>
+					</div>
+					
+				  <div class="col">
+				    	<img src="images/cake1_Spiders.png" width="105" height="46" alt="" class="hvr-grow-rotate cake_decor_bg_base"/>
+					</div>
+					
+				  <div class="col">
+				    	<button type="button" class="btn btn-success" id="AceptAndToppings">Toppings</button>
+					</div>
+				</div>
+				</div>
+				
+				
+				
+				
+				<div class="toppings">
+				<div class="row mt-5 align-items-end">
+					
+				  <div class="col">
+					  <img src="images/topping_tentacles.png" width="131" height="184" alt="" class="hvr-grow-rotate cake_topping"/>
+				  </div>
+					
+				  <div class="col">
+				    	<img src="images/topping_hat.png" width="131" height="184" alt="" class="hvr-grow-rotate cake_topping"/>
+				  </div>
+					
+				  <div class="col">
+				    	<img src="images/topping_frog.png" width="131" height="184" alt="" class="hvr-grow-rotate cake_topping"/>
+				  </div>
+					
+				  <div class="col">
+					  <button type="button" class="btn btn-danger" id="GoBackToDecors">Go Back</button>
+				  </div>
+					
+				</div>
+				</div>
+				
+				
+		  </div>
+			<div class="col-2 align-self-end">
+				<img src="images/elevator_closed.png" alt="" name="elevator" class="img-fluid elevator" style="margin: -3rem;"/>
 			</div>
 		</div>
 	</div>
 	
+	<div class="footer">
+	  <div class="row pt-5 pb-5">
+			<div class="col"></div>
+			<div class="col"><a href="index.html"><img src="images/sign_logo1.png" alt="" width="151" height="141" class="hvr-grow-rotate"/></a></div>
+			<div class="col"></div>
+			<div class="col-2"><a href="customer_service.html"><img src="images/sign2.png" alt="" class="hvr-grow-rotate"/></a></div>
+			<div class="col-2"><a href="https://www.kalliegeorge.com/books" target="_blank"><img src="images/sign3.png" alt="" class="hvr-grow-rotate"/></a></div>
+			<div class="col-5"></div>
+		</div>
+	</div>
+
+	<script>
+		
+		//Manejador de stacking cakes
+		
+		var Cake_Layer1 = false;
+		var Cake_Layer2 = false;
+		var Cake_Layer3 = false;
+		
+		var bite = new Audio('Sounds/bite.wav');
+		
+		$(".cake_layer_bg_base").click(function(){
+			bite.play();
+			
+			var changeInto = "url('" + $(this).attr('src') + "')";
+			$("#CakeLayer1").css('background-image', changeInto);
+			
+			Cake_Layer1 = true;
+			CheckLayersCake();
+		});
+		
+		$(".cake_layer_bg_center").click(function(){
+			bite.play();
+			
+			var changeInto = "url('" + $(this).attr('src') + "')";
+			$("#CakeLayer2").css('background-image', changeInto);
+			
+			Cake_Layer2 = true;
+			CheckLayersCake();
+		});
+		
+		$(".cake_layer_bg_top").click(function(){
+			bite.play();
+			
+			var changeInto = "url('" + $(this).attr('src') + "')";
+			$("#CakeLayer3").css('background-image', changeInto);
+			
+			Cake_Layer3 = true;
+			CheckLayersCake();
+		});
+		
+		
+		//Check de los layers de cakes para ver si esta todo habilitar boton para seguir
+		function CheckLayersCake()
+		{
+			if (Cake_Layer1 && Cake_Layer2 && Cake_Layer3)
+			{
+				$("#AceptAndDecor").show();
+				$("#Disabled").hide();
+				
+				console.log("Habilito boton insertando html el boton");
+			}
+		}
+		
+		
+		//Aceptar y continuar con la decoracion
+		$("#AceptAndDecor").click(
+			function(){
+				//Hide cakes
+				$(".cakes").hide();
+				
+				//Show Decors
+				$(".decors").show();
+		});
+		
+		//Aceptar y continuar con los toppings
+		$("#AceptAndToppings").click(
+			function(){
+				//Hide cakes
+				$(".decors").hide();
+				
+				//Show Decors
+				$(".toppings").show();
+		});
+		
+		//Manejador de goback
+		$("#GoBackToCake").click(
+			function(){
+				//Hide cakes
+				$(".decors").hide();
+				
+				//Show Decors
+				$(".cakes").show();
+		});
+		
+		$("#GoBackToDecors").click(
+			function(){
+				//Hide cakes
+				$(".toppings").hide();
+				
+				//Show Decors
+				$(".decors").show();
+		});
+		
+		
+		//DECOR TIME ----------------------->
+		var decor = new Audio('Sounds/zombie_hit.wav');
+		
+		$(".cake_decor_bg_base").click(function(){
+			decor.play();
+			
+			var changeInto = $(this).attr('src');
+			$("#DecorLayer1").attr('src', changeInto);
+		});
+		
+		$(".cake_decor_bg_center").click(function(){
+			decor.play();
+			
+			var changeInto = $(this).attr('src');
+			$("#DecorLayer2").attr('src', changeInto);
+		});
+		
+		$(".cake_decor_bg_top").click(function(){
+			decor.play();
+			
+			var changeInto = $(this).attr('src');
+			$("#DecorLayer3").attr('src', changeInto);
+		});
+		
+		
+		//Topping Handler
+		$(".cake_topping").click(function(){
+			decor.play();
+			
+			var changeInto = $(this).attr('src');
+			$("#Topping").attr('src', changeInto);
+		});
+		
+	</script>
 	
-
-
 	<!-- Modal -->
 	<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
 	  <div class="modal-dialog modal-dialog-centered">
 		<div class="modal-content">
 		  
 		  <div class="modal-body">
-		  	<img src="images/botonera.png" alt="" usemap="#mapa"/>
+		  	<img src="images/botonera.png" alt="" usemap="#mapa" id="elevator_buttons"/>
 		  </div>
 			
 		</div>
@@ -83,6 +385,7 @@
 		<area shape="rect" coords="163,418,193,453" href="broom_floor.html" alt="Button6">
 		<area shape="rect" coords="78,478,129,505" href="customer_service.html" alt="Button7">
 		<area shape="rect" coords="148,478,199,505" href="books.html" alt="Button8">
+		
 	</map>
 	
 	<script src="Javascript/scripts.js"></script>
